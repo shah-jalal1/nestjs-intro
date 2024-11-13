@@ -18,14 +18,14 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle("NestJs Intro")
-    .setDescription("Use the base api url as http://localhost:3001/")
+    .setDescription("Use the base api url as http://localhost:4000/")
     .setVersion("1.0")
-    .addServer("http://localhost:3001")
+    .addServer("http://localhost:400")
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup("api", app, documentFactory);
 
-  await app.listen(3002);
+  await app.listen(4000);
 }
 
 bootstrap();
